@@ -21,18 +21,25 @@
 title: Erik Tran's corner
 email: erik.tran.tt@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Create reusable and maintainable code guided by OOP to turn ideas into tangible solutions.
+  Always looking for opportunities to learn new things and get hands dirty.
+  Value teamwork, mentorship, learning, and sharing knowledge. Ruby, Rails, JavaScript. 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://eriktran.me" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username:  erik-trantt
 
+published_date: "today"
+
+
 # Build settings
-theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-autoprefixer
+
+# Plugins configuration
+autoprefixer:
+  only_production: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
