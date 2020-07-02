@@ -1,4 +1,25 @@
-<h2>Erik Tran</h2>
-{% include navigations.html %}
-<div class="border-1 py-2"></div>
-{% include social.html %}
+<a class="navitem navlink" href="{{ site.url }}">
+  <h2>Erik Tran</h2>
+</a>
+<nav>
+  {% for item in site.data.navigation %}
+    <!-- <a href="{{ item.link }}" class="navitem mt-3 ml-2 {% if page.url == item.link %}active{% endif %}">
+      {{ item.name }}
+    </a> -->
+    {%- if page.url == item.link -%}
+      <span class="mt-3 ml-2 navitem active">{{ item.name }}</span>
+    {%- else -%}
+      <a href="{{ item.link }}" class="navitem navlink mt-3 ml-2">{{ item.name }}</a>
+    {%- endif -%}
+  {% endfor %}
+</nav>
+
+<div class="border-top-1 border-gray my-3"></div>
+
+<div class="social mb-2">
+  {% for item in site.data.social %}
+    <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer" class="navitem inline-block mx-1">
+      <i class="text-large icofont-{{ item.icofont }}"></i>
+    </a>
+  {% endfor %}
+</div>
