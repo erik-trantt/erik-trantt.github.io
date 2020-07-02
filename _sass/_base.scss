@@ -1,0 +1,166 @@
+// Base: contained within this file are all your resets, variables, mixins, and any utility classes.
+
+// VENDOR IMPORTS
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Roboto+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap');
+@import "./plugins/icofont/icofont.min.css";
+
+// ----
+// CSS RESET
+@import "css-reset";
+
+// ----
+// SETTING BASE
+html {
+  font-size: 62.5%; // setting rem = 10px
+}
+
+// ----
+// MIXINS
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) * 1px;
+  font-size: $sizeValue * 1rem;
+}
+
+@mixin spacing($type, $direction, $spaceValue: 1, $defaultSize: 0.5rem) {
+  $spaceSize: $spaceValue * $defaultSize;
+  @if ($direction == "y" or $direction == "t") {
+    #{$type}-top: $spaceSize !important;
+  }
+  @if ($direction == "y" or $direction == "b") {
+    #{$type}-bottom: $spaceSize !important;
+  }
+  @if ($direction == "x" or $direction == "l") {
+    #{$type}-left: $spaceSize !important;
+  }
+  @if ($direction == "x" or $direction == "r") {
+    #{$type}-right: $spaceSize !important;
+  }
+}
+
+// ----
+// VARIABLES
+$minScreenSize: 35.5em;
+
+$fontSizeMultiplier: 1.6;
+
+$fontSizeBase: $fontSizeMultiplier  * 1.0;
+$fontSizeSmall: $fontSizeMultiplier * 0.8;
+$fontSizeLarge: $fontSizeMultiplier * 1.2;
+
+$fontSizeH1: $fontSizeMultiplier    * 2.0;
+$fontSizeH2: $fontSizeMultiplier    * 1.7;
+$fontSizeH3: $fontSizeMultiplier    * 1.4;
+$fontSizeH4: $fontSizeMultiplier    * 1.2;
+
+$fontFamilyHeadings: 'Roboto Condensed', Verdana, sans-serif;
+$fontFamilyText: 'Open Sans', Arial, Helvetica, sans-serif;
+$fontFamilyMono:'Fira Mono', monospace;
+
+$headingMargin: 2rem;
+
+$paddingSidebar: 20px;
+$paddingMain: 50px;
+
+// ----
+// COLORS
+// https://coolors.co/353535-3c6e71-ffffff-d9d9d9-284b63
+$colorCharcoal: rgb(53, 53, 53);
+$colorSolarized: rgb(60, 110, 113);
+$colorWhite: rgb(255, 255, 255);
+$colorGray: rgb(217, 217, 217);
+$colorBlue: rgb(40, 75, 99);
+
+// ----
+// UTILITIES
+.text-inherit { font-size: inherit !important; }
+.text-bold { font-weight: bold; }
+.text-small { @include font-size($fontSizeSmall); }
+.text-large { @include font-size($fontSizeLarge); }
+.text-left { text-align: left !important; }
+.text-right { text-align: right !important; }
+.text-center { text-align: center !important; }
+.inline-block { display: inline-block !important; }
+.text {
+  &-charcoal { color: $colorCharcoal !important; }
+  &-solarized { color: $colorSolarized !important; }
+  &-white { color: $colorWhite !important; }
+  &-gray { color: $colorGray !important; }
+  &-blue { color: $colorBlue !important; }
+}
+
+.bg {
+  &-charcoal { background-color: $colorCharcoal !important; }
+  &-solarized { background-color: $colorSolarized !important; }
+  &-white { background-color: $colorWhite !important; }
+  &-gray { background-color: $colorGray !important; }
+  &-blue { background-color: $colorBlue !important; }
+}
+
+// imitating Bootstrap padding and margin classes
+@for $i from 0 through 3 {
+  .mx-#{$i} { @include spacing("margin", "x", $i); }
+  .my-#{$i} { @include spacing("margin", "y", $i); }
+  .mt-#{$i} { @include spacing("margin", "t", $i); }
+  .mb-#{$i} { @include spacing("margin", "b", $i); }
+  .ml-#{$i} { @include spacing("margin", "l", $i); }
+  .mr-#{$i} { @include spacing("margin", "r", $i); }
+
+  .px-#{$i} { @include spacing("padding", "x", $i); }
+  .py-#{$i} { @include spacing("padding", "y", $i); }
+  .pt-#{$i} { @include spacing("padding", "t", $i); }
+  .pb-#{$i} { @include spacing("padding", "b", $i); }
+  .pl-#{$i} { @include spacing("padding", "l", $i); }
+  .pr-#{$i} { @include spacing("padding", "r", $i); }
+}
+
+// size for icon
+$icoWidth: 16px;
+$icoHeight: 16px;
+.ico-sm { width: $icoWidth * 1; height: $icoHeight * 1; }
+.ico-md { width: $icoWidth * 2; height: $icoHeight * 2; }
+.ico-lg { width: $icoWidth * 3; height: $icoHeight * 3; }
+
+.border-top-1 { border-top: solid 1px $colorCharcoal; }
+.border-white { border-color: $colorWhite; }
+.border-gray { border-color: $colorGray; }
+
+.link-none { text-decoration: none !important; }
+
+// ----
+// BASE ELEMENTS
+h1, h2, h3 { font-family: $fontFamilyHeadings; }
+
+h1 { @include font-size($fontSizeH1); margin-bottom: $headingMargin * 1.0; }
+h2 { @include font-size($fontSizeH2); margin-bottom: $headingMargin * 0.8; }
+h3 { @include font-size($fontSizeH3); margin-bottom: $headingMargin * 0.6; }
+
+a, p, li, span, footer, code, pre, nav {
+  @include font-size($fontSizeBase);
+  color: inherit;
+}
+
+i, strong {
+  font-size: inherit;
+}
+
+p { line-height: 1.5; }
+
+a, p, li, span, footer, small, strong, i {
+  font-family: $fontFamilyText;
+}
+
+code, pre {
+  font-family: $fontFamilyMono;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+footer {
+  text-align: center;
+
+  @media screen and (min-width: $minScreenSize) {
+    text-align: left;
+  }
+}
+

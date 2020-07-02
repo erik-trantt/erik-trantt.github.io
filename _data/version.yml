@@ -1,0 +1,14 @@
+- version: 1.0.0
+  date: 2020-07-02
+  git-head: acf7a1c
+  additions: >-
+    None
+  changes: >-
+    Used Jekyll as static site generator
+- version: 1.1.0
+  date: 2020-07-02
+  git-head: acf7a1c
+  additions: >-
+    None
+  changes: >-
+    Used Jekyll as static site generator
