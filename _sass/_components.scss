@@ -12,3 +12,44 @@
   &.navlink:hover { text-decoration: underline; }
   &.active { color: rgba($colorGray, 0.7); }
 }
+
+.profile {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: $minScreenSize) {
+    flex-direction: row;
+  }
+  img {
+    border-radius: 50%;
+    width: 200px;
+    max-height: 100%;
+
+    @media screen and (min-width: $minScreenSize) {
+      width: 300px;
+    }
+  }
+
+  &-bio {
+    margin-top: 1rem; 
+    @media screen and (min-width: $minScreenSize) {
+      margin-left: 1rem;
+    }
+  }
+}
+
+.btn-cta-resume {
+  display: inline-block;
+  padding: 2rem;
+  border: solid 2px $colorCharcoal;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: $colorCharcoal;
+
+  &:hover {
+    text-decoration: underline;
+    background-color: $colorBlue;
+    color: $colorWhite;
+    font-weight: bold;
+  }
+}

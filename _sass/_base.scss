@@ -58,9 +58,7 @@ $fontFamilyText: 'Open Sans', Arial, Helvetica, sans-serif;
 $fontFamilyMono:'Fira Mono', monospace;
 
 $headingMargin: 2rem;
-
-$paddingSidebar: 20px;
-$paddingMain: 50px;
+$textMargin: 1rem;
 
 // ----
 // COLORS
@@ -144,7 +142,7 @@ i, strong {
   font-size: inherit;
 }
 
-p { line-height: 1.5; }
+p { line-height: 1.5; margin-bottom: $textMargin * 0.8; }
 
 a, p, li, span, footer, small, strong, i {
   font-family: $fontFamilyText;
