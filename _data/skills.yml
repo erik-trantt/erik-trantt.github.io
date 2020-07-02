@@ -1,0 +1,14 @@
+- group: Front-end
+  names: HTML5, CSS3 (SASS), JavaScript (ES6)
+- group: Back-end
+  names: Ruby on Rails
+- group: Database
+  names: SQLite, PostgreSQL
+- group: Framework
+  names: Bootstrap, StimulusJS
+- group: Version Control
+  names: GitHub
+- group: CMS
+  names: WordPress
+- group: Wireframe
+  names: Figma
