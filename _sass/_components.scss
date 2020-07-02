@@ -17,7 +17,7 @@
   display: flex;
   flex-direction: column;
 
-  @media screen and (min-width: $minScreenSize) {
+  @media screen and (min-width: $minScreenSizeMD) {
     flex-direction: row;
   }
   img {
@@ -25,14 +25,14 @@
     width: 200px;
     max-height: 100%;
 
-    @media screen and (min-width: $minScreenSize) {
+    @media screen and (min-width: $minScreenSizeMD) {
       width: 300px;
     }
   }
 
   &-bio {
     margin-top: 1rem; 
-    @media screen and (min-width: $minScreenSize) {
+    @media screen and (min-width: $minScreenSizeMD) {
       margin-left: 1rem;
     }
   }
@@ -50,6 +50,21 @@
     text-decoration: underline;
     background-color: $colorBlue;
     color: $colorWhite;
-    font-weight: bold;
   }
+}
+
+.skills {
+  @media screen and (min-width: $minScreenSize) {
+    display: flex;
+    flex-wrap: wrap;
+    
+    .skill-item {
+      width: 300px;
+      height: max-content;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      margin-right: 1rem;
+    }
+  }
+
 }

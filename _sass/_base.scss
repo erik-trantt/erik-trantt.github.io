@@ -18,8 +18,8 @@ html {
 // ----
 // MIXINS
 @mixin font-size($sizeValue: 1.6) {
-  font-size: ($sizeValue * 10) * 1px;
-  font-size: $sizeValue * 1rem;
+  font-size: ($sizeValue * 10) * 1px !important;
+  font-size: $sizeValue * 1rem !important;
 }
 
 @mixin spacing($type, $direction, $spaceValue: 1, $defaultSize: 0.5rem) {
@@ -41,6 +41,7 @@ html {
 // ----
 // VARIABLES
 $minScreenSize: 35.5em;
+$minScreenSizeMD: 48em;
 
 $fontSizeMultiplier: 1.6;
 
@@ -79,6 +80,7 @@ $colorBlue: rgb(40, 75, 99);
 .text-right { text-align: right !important; }
 .text-center { text-align: center !important; }
 .inline-block { display: inline-block !important; }
+.block { display: block !important; }
 .text {
   &-charcoal { color: $colorCharcoal !important; }
   &-solarized { color: $colorSolarized !important; }
@@ -111,6 +113,8 @@ $colorBlue: rgb(40, 75, 99);
   .pl-#{$i} { @include spacing("padding", "l", $i); }
   .pr-#{$i} { @include spacing("padding", "r", $i); }
 }
+
+.mb-5 { @include spacing("margin", "b", 5); }
 
 // size for icon
 $icoWidth: 16px;
