@@ -1,0 +1,25 @@
+// Components: anything reusable such as buttons, navbars, cards etc.
+.navlink {
+  @include font-size($fontSizeH4);
+  margin: 5px;
+  text-decoration: none;
+
+  &, &:visited {
+    color: rgba(0,0,0,0.6);
+  }
+
+  &:hover {
+    color: rgba(0,0,0,1);
+  }
+
+  &.active {
+    color: rgba(0,0,0,1);
+  }
+
+  display: inline;
+  margin: 0;
+  
+  @media screen and (min-width: $minScreenSize) {
+    display: block;
+  }
+}
