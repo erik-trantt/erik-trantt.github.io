@@ -4,10 +4,11 @@ Hi there, thank you for stopping and looking at my portfolio page.
 ## Setup and Server
 ### Setup
 To get the source code
-> git clone git@github.com:erik-trantt/erik-trantt.github.io.git
-> cd erik-trantt.github.io
-> bundle install
-
+``` bash
+git clone git@github.com:erik-trantt/erik-trantt.github.io.git
+cd erik-trantt.github.io
+bundle install
+```
 ### Server
 The site is powered by Jekyll static site generator.
 Jekyll is a Ruby gem that can be installed on most computers.
@@ -22,15 +23,16 @@ Details installation guidelines for your platforms can be found in the [official
 
 ### Deployment
 Local environment
-> bundle exec jekyll server
-
+``` bash
+bundle exec jekyll server
+```
 GitHub Pages
 GitHub Pages support Jekyll. Simply push your source code to your own GitHub repo.
 
 ## The site
-*Site:* https://eriktran.me/
+**Site:** https://eriktran.me/
 
-*GP Pages Link:* https://erik-trantt.github.io/
+**GP Pages Link:** https://erik-trantt.github.io/
 
 My site is continuously developed and maintained by myself.
 
