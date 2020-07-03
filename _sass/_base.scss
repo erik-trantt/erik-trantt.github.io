@@ -48,6 +48,7 @@ $fontSizeMultiplier: 1.6;
 $fontSizeBase: $fontSizeMultiplier  * 1.0;
 $fontSizeSmall: $fontSizeMultiplier * 0.8;
 $fontSizeLarge: $fontSizeMultiplier * 1.2;
+$fontSizeXL: $fontSizeMultiplier * 1.4;
 
 $fontSizeH1: $fontSizeMultiplier    * 2.0;
 $fontSizeH2: $fontSizeMultiplier    * 1.7;
@@ -76,6 +77,7 @@ $colorBlue: rgb(40, 75, 99);
 .text-bold { font-weight: bold; }
 .text-small { @include font-size($fontSizeSmall); }
 .text-large { @include font-size($fontSizeLarge); }
+.text-xl { @include font-size($fontSizeXL); }
 .text-left { text-align: left !important; }
 .text-right { text-align: right !important; }
 .text-center { text-align: center !important; }

@@ -24,8 +24,8 @@ permalink: /about
   <h2>Skills</h2>
   <div class="skills">
     {% for skill in site.data.skills %}
-    <div class="skill-item">
-      <span class="text-bold">{{ skill.group }}</span>
+    <div class="skill-item my-3">
+      <p class="text-bold mb-1">{{ skill.group }}</p>
       <p>{{ skill.names }}</p>
     </div>
     {% endfor %}
