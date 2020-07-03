@@ -2,13 +2,20 @@
 .navitem {
   color: rgba($colorWhite, 1.0);
   text-decoration: none;
-
   display: inline;
+
   @media screen and (min-width: $minScreenSize) {
     display: block;
   }
 
-  &.navlink:hover { text-decoration: underline; }
+  &.navlink {
+    text-decoration: underline;
+    @media screen and (min-width: $minScreenSize) {
+      text-decoration: none;
+    }
+    
+    &:hover { text-decoration: underline; }
+  }
   &.active { color: rgba($colorGray, 0.7); }
 }
 
@@ -22,10 +29,11 @@
   img {
     border-radius: 50%;
     width: 200px;
-    max-height: 100%;
+    max-height: 200px;
 
     @media screen and (min-width: $minScreenSizeMD) {
       width: 300px;
+      max-height: 300px;
     }
   }
 
@@ -41,8 +49,8 @@
   display: inline-block;
   padding: 2rem;
   border: solid 2px $colorCharcoal;
-  text-decoration: none;
   box-sizing: border-box;
+  text-decoration: none;
   color: $colorCharcoal;
 
   &:hover {
@@ -56,14 +64,13 @@
   @media screen and (min-width: $minScreenSize) {
     display: flex;
     flex-wrap: wrap;
-    
-    .skill-item {
+  }
+  
+  .skill-item {
+    @media screen and (min-width: $minScreenSize) {
       width: 300px;
       height: max-content;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
       margin-right: 1rem;
     }
   }
-
 }
