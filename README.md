@@ -50,13 +50,13 @@ My site is continuously developed and maintained by myself.
 
 ## Stylesheets
 Organizing my stylesheets into this simple structure: 
-_sass/
+- _sass/
   - main.scss
     - _base.scss
       - css-reset.css
     - _layout.scss
     - _components.scss
-assets/
+- assets/
   - css/
     - plugins/
       - icofont/
