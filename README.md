@@ -48,6 +48,20 @@ My site is continuously developed and maintained by myself.
 - Figma - Wireframe
 - VS Code, Sublime Text 3 - coding
 
+## Stylesheets
+Organizing my stylesheets into this simple structure: 
+_sass/
+  - main.scss
+    - _base.scss
+      - css-reset.css
+    - _layout.scss
+    - _components.scss
+assets/
+  - css/
+    - plugins/
+      - icofont/
+    - styles.scss
+
 ## Plugins
 - [jekyll-autoprefixer](https://github.com/vwochnik/jekyll-autoprefixer) for auto-prefixing CSS properties.
 
