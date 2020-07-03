@@ -1,6 +1,7 @@
 <a class="navitem navlink" href="{{ site.url }}">
   <h2>Erik Tran</h2>
 </a>
+<<<<<<< continuous-styling
 <nav>
   {% for item in site.data.navigation %}
     {%- if page.url == item.link -%}
@@ -10,14 +11,10 @@
     {%- endif -%}
   {% endfor %}
 </nav>
+=======
+{% include navigations.html %}
+>>>>>>> local
 
 <div class="border-top-1 border-gray my-3"></div>
 
-<div class="social mb-2">
-  <a class="text-small block mb-2" href="mailto:erik.tran.tt@gmail.com" target="_blank">erik.tran.tt@gmail.com</a>
-  {% for item in site.data.social %}
-    <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer" class="navitem inline-block mx-1">
-      <i class="text-large icofont-{{ item.icofont }}"></i>
-    </a>
-  {% endfor %}
-</div>
+{% include social.html %}

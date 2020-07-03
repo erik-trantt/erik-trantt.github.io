@@ -1,6 +1,5 @@
 // Components: anything reusable such as buttons, navbars, cards etc.
 .navitem {
-  @include font-size($fontSizeH4);
   color: rgba($colorWhite, 1.0);
   text-decoration: none;
 
