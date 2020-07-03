@@ -16,18 +16,23 @@ Requirements:
 - *Ruby* (version *2.5* and above)
 - *RubyGems*
 
-Details installation guidelines for your platforms can be found in the [official documenation](https://jekyllrb.com/docs/installation/)
+Details installation guidelines for your platforms can be found in the [official documenation](https://jekyllrb.com/docs/installation/):
 - [macOS](https://jekyllrb.com/docs/installation/macos/)
 - [Ubuntu](https://jekyllrb.com/docs/installation/ubuntu/)
 - [Windows](https://jekyllrb.com/docs/installation/windows/)
 
 ### Deployment
-Local environment
+#### Running it locally
 ``` bash
-bundle exec jekyll server
+bundle exec jekyll serve
 ```
-GitHub Pages
-GitHub Pages support Jekyll. Simply push your source code to your own GitHub repo.
+Open your browser and go to [http://127.0.0.1:4000/](http://127.0.0.1:4000/)
+
+#### BYO (Built your own)
+GitHub Pages support Jekyll. Simply clone the project and push to your own GitHub repo.
+Follow this [guideline](https://guides.github.com/features/pages/) to turn a GitHub repo into GitHub Page.
+
+*Any commits to master branch is auto-deployed to your GitHub Page.*
 
 ## The site
 **Site:** https://eriktran.me/
@@ -43,6 +48,10 @@ My site is continuously developed and maintained by myself.
 - Figma - Wireframe
 - VS Code, Sublime Text 3 - coding
 
-## Stylesheet
 ## Plugins
+- [jekyll-autoprefixer](https://github.com/vwochnik/jekyll-autoprefixer) for auto-prefixing CSS properties.
+
 ## Resources
+- Webring [Webring](https://webring.xxiivv.com/#random) for inspirations on my personal portfolio
+- [Lennon](https://lennonzf.me)'s advice on stylings and structures
+- CSS-Tricks for tips and snippets on how to structure my Sassy CSS and usage
