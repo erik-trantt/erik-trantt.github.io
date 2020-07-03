@@ -60,6 +60,8 @@ Organizing my stylesheets into this simple structure:
   - css/
     - plugins/
       - icofont/
+        - icofont.css
+        - icofont.min.css
     - styles.scss
 
 ## Plugins
