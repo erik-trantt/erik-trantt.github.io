@@ -2,31 +2,4 @@
 layout: default
 title: Erik Tran
 ---
-<section class="mb-5">
-  <h2>About me</h2>
-  <div class="profile">
-    <img src="/assets/images/profile.jpg" alt="Erik Tran's profile photo">
-    <div class="profile-bio">
-      <p>Hi, I'm Erik.</p>
-      <p>I'm a Le Wagon alumni, currently based in Melbourne, VIC, Australia.</p>
-      <p>Create reusable and maintainable code guided by OOP to turn ideas into tangible solutions.</p>
-      <p>Always looking for opportunities to learn new things and get hands dirty.</p>
-      <p>Value teamwork, mentorship, learning, and sharing knowledge.</p>
-      <div>
-        <a class="btn-cta-resume text-bold" href="/assets/files/erik-tran-resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="my-3">
-  <h2>Skills</h2>
-  <div class="skills">
-    {% for skill in site.data.skills %}
-    <div class="skill-item my-3">
-      <p class="text-bold mb-1">{{ skill.group }}</p>
-      <p>{{ skill.names }}</p>
-    </div>
-    {% endfor %}
-  </div>
-</section>
+{% include_relative /about.html %}
