@@ -49,7 +49,7 @@ My site is continuously developed and maintained by myself.
 - VS Code, Sublime Text 3 - coding
 
 ## Stylesheets
-Organizing my stylesheets into this simple structure: 
+Organizing my stylesheets into this structure following the [guideline](https://www.creativebloq.com/how-to/how-to-structure-media-queries-in-sass): 
 - _sass/
   - main.scss
     - _base.scss
@@ -71,6 +71,5 @@ Organizing my stylesheets into this simple structure:
 - Webring [Webring](https://webring.xxiivv.com/#random) for inspirations on my personal portfolio
 - [Lennon](https://lennonzf.me)'s advice on stylings and structures
 - CSS-Tricks for tips and snippets on how to structure my Sassy CSS and usage:
-  - [https://www.creativebloq.com/how-to/how-to-structure-media-queries-in-sass](https://www.creativebloq.com/how-to/how-to-structure-media-queries-in-sass)
   - [https://css-tricks.com/approaches-media-queries-sass/](https://css-tricks.com/approaches-media-queries-sass/)
   - [https://css-tricks.com/autoprefixer/](https://css-tricks.com/autoprefixer/)
